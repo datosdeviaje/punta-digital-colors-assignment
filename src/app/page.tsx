@@ -11,7 +11,7 @@ export default function Home() {
 
       {/* CODE THAT DISPLAYS COLORS */}
 
-      <p className="font-bold text-4xl">COLORS SEARCH ASSIGNMENT</p>
+      <p className="font-bold text-4xl">COLORS SEARCH ASSIGNMENT Jose</p>
       {/* REMOVE THIS ^^^^^*/}
     </div>
   );
