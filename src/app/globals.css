@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f5f5f5;
   --foreground: #171717;
 }
 
@@ -18,4 +18,45 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: clamp(1rem, 4vw, 3rem);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.searchBar {
+  width: min(100%, 500px);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #666;
+  border-radius: 2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.searchBar:focus {
+  border-color: #e0e0e0;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr));
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .colorGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
 }

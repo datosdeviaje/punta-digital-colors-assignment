@@ -1,0 +1,27 @@
+.card {
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.colorDetails {
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .colorDetails {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+}
